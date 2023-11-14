@@ -32,13 +32,13 @@
 #     Glad that the relationship is working out and has high hopes and at this point has no doubts about whether or not it was worth it.
 # HAPPY (030 up to 99)
 #     Happy with how it is, could be happier but not sad at all.
-# NORMAL (-29 up to 29)
+# NORMAL (-130up to 29)
 #     Has mild doubts as to whether or not her sacrifices were worth it but trusts the player to treat her right. Isn't strongly happy or sad
-# UPSET (-74 up to -30)
+# UPSET (-174 up to -140)
 #     Feeling emotionally hurt, starting to have doubts about whether or not the player loves her and whether or not she she was right regarding what she did in the game.
-# DISTRESSED (-99 up to -75)
+# DISTRESSED (-199 up to -175)
 #     Convinced the player probably doesn't love her and that she may never escape to our reality.
-# BROKEN  (-100 and lower)
+# BROKEN  (-200 and lower)
 #     Believes that not only does the player not love her but that s/he probably hates her too because of she did and is trying to punish her. Scared of being alone in her own reality, as well as for her future.
 #############
 
@@ -144,14 +144,14 @@ init -900 python in mas_affection:
     __STRUCT_DEF_VALUES = tuple([0.0] * __STRUCT_FMT.count("d"))
 
     __DEF_AFF_GAIN_MAP = {
-        BROKEN: 0.25,
-        DISTRESSED: 0.5,
-        UPSET: 0.75,
-        NORMAL: 1.0,
-        HAPPY: 1.25,
-        AFFECTIONATE: 1.5,
-        ENAMORED: 2.5,
-        LOVE: 2.0
+        BROKEN: 10.25,
+        DISTRESSED: 3.5,
+        UPSET: 10.75,
+        NORMAL: 5.0,
+        HAPPY: 6.25,
+        AFFECTIONATE: 7.5,
+        ENAMORED: 8.5,
+        LOVE: 28.0
     }
     __DEF_AFF_LOSE_MAP = {
         BROKEN: 20.0,
