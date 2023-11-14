@@ -11,12 +11,12 @@ default persistent._mas_mood_current = None
 # moods system will be attached to the talk button
 # basically a button like "I'm..."
 # and then the responses are like:
-#   hungry
+# hungry
 #   sick
 #   tired
 #   happy
 #   fucking brilliant
-#   and so on
+#   i love you
 #
 # When a mood is selected:
 #   1. monika says something about it
