@@ -10,8 +10,8 @@
 #
 # Affection mechanics:
 #
-# - Affection gain has a 7 points cap per day
-# - Affection lose doesn't have a cap
+# - Affection gain has a 500 points cap per day
+# - Affection lose has 1 point cap per day
 # - Max and Min possible values for affection are 1000000 and -1000000 respectively
 # - Player lose affection every time it takes longer than 1 week to visit Monika
 #     the reduction is measured by the formula number_of_days_absent * 0.5
@@ -38,7 +38,7 @@
 #     Feeling emotionally hurt, starting to have doubts about whether or not the player loves her and whether or not she she was right regarding what she did in the game.
 # DISTRESSED (-99 up to -75)
 #     Convinced the player probably doesn't love her and that she may never escape to our reality.
-# BROKEN  (-100 and lower)
+# BROKEN  (-1000 and lower)
 #     Believes that not only does the player not love her but that s/he probably hates her too because of she did and is trying to punish her. Scared of being alone in her own reality, as well as for her future.
 #############
 
@@ -144,24 +144,24 @@ init -900 python in mas_affection:
     __STRUCT_DEF_VALUES = tuple([0.0] * __STRUCT_FMT.count("d"))
 
     __DEF_AFF_GAIN_MAP = {
-        BROKEN: 0.25,
-        DISTRESSED: 0.5,
-        UPSET: 0.75,
-        NORMAL: 1.0,
-        HAPPY: 1.25,
-        AFFECTIONATE: 1.5,
-        ENAMORED: 2.5,
-        LOVE: 2.0
+        BROKEN: 15,
+        DISTRESSED: 15.5,
+        UPSET: 10.75,
+        NORMAL: 10.0,
+        HAPPY: 10.25,
+        AFFECTIONATE: 10.5,
+        ENAMORED: 20.5,
+        LOVE: 20.0
     }
     __DEF_AFF_LOSE_MAP = {
-        BROKEN: 20.0,
-        DISTRESSED: 15.0,
-        UPSET: 10.0,
+        BROKEN: 2.0,
+        DISTRESSED: 1.0,
+        UPSET: 1.0,
         NORMAL: 5.0,
-        HAPPY: 10.0,
-        AFFECTIONATE: 15.0,
-        ENAMORED: 30.0,
-        LOVE: 60.0
+        HAPPY: 1.0,
+        AFFECTIONATE: 1.0,
+        ENAMORED: 3.0,
+        LOVE: 6.0
     }
     __DEF_AFF_FRACTION_LOSE_MAP = {
         BROKEN: 0.3,
