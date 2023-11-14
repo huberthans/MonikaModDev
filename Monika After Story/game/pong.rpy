@@ -7,21 +7,21 @@ default persistent._mas_pm_ever_let_monika_win_on_purpose = False
 # the day at which the difficulty change was initiated
 default persistent._mas_pong_difficulty_change_next_game_date = datetime.date.today()
 
-define PONG_DIFFICULTY_CHANGE_ON_WIN            = +1
-define PONG_DIFFICULTY_CHANGE_ON_LOSS           = -1
-define PONG_DIFFICULTY_POWERUP                  = +5
-define PONG_DIFFICULTY_POWERDOWN                = -5
-define PONG_PONG_DIFFICULTY_POWERDOWNBIG        = -10
+define PONG_DIFFICULTY_CHANGE_ON_WIN            = +7
+define PONG_DIFFICULTY_CHANGE_ON_LOSS           =  0
+define PONG_DIFFICULTY_POWERUP                  = +17
+define PONG_DIFFICULTY_POWERDOWN                =  5
+define PONG_PONG_DIFFICULTY_POWERDOWNBIG        =  5
 
 #Triggering the same response twice in a row leads to a different response, not all responses reset this (on purpose)
 define PONG_MONIKA_RESPONSE_NONE                                                = 0
-define PONG_MONIKA_RESPONSE_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES                = 1
-define PONG_MONIKA_RESPONSE_SECOND_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES         = 2
-define PONG_MONIKA_RESPONSE_WIN_LONG_GAME                                       = 3
-define PONG_MONIKA_RESPONSE_WIN_SHORT_GAME                                      = 4
-define PONG_MONIKA_RESPONSE_WIN_TRICKSHOT                                       = 5
-define PONG_MONIKA_RESPONSE_WIN_EASY_GAME                                       = 6
-define PONG_MONIKA_RESPONSE_WIN_MEDIUM_GAME                                     = 7
+define PONG_MONIKA_RESPONSE_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES                = 15
+define PONG_MONIKA_RESPONSE_SECOND_WIN_AFTER_PLAYER_WON_MIN_THREE_TIMES         = 5
+define PONG_MONIKA_RESPONSE_WIN_LONG_GAME                                       = 5
+define PONG_MONIKA_RESPONSE_WIN_SHORT_GAME                                      = 5
+define PONG_MONIKA_RESPONSE_WIN_TRICKSHOT                                       = 7
+define PONG_MONIKA_RESPONSE_WIN_EASY_GAME                                       = 8
+define PONG_MONIKA_RESPONSE_WIN_MEDIUM_GAME                                     = 8
 define PONG_MONIKA_RESPONSE_WIN_HARD_GAME                                       = 8
 define PONG_MONIKA_RESPONSE_WIN_EXPERT_GAME                                     = 9
 define PONG_MONIKA_RESPONSE_WIN_EXTREME_GAME                                    = 10
@@ -104,7 +104,7 @@ init:
                 self.PADDLE_X_PLAYER = 128                                      #self.COURT_WIDTH * 0.1
                 self.PADDLE_X_MONIKA = 1152 - self.PADDLE_WIDTH                 #self.COURT_WIDTH * 0.9 - self.PADDLE_WIDTH
 
-                self.BALL_MAX_SPEED = 2000.0 + self.CURRENT_DIFFICULTY * 100.0
+                self.BALL_MAX_SPEED = 1500.0 + self.CURRENT_DIFFICULTY * 60.0
 
                 # The maximum possible reflection angle, achieved when the ball
                 # hits the corners of the paddle.
