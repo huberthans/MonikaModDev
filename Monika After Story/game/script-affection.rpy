@@ -10,7 +10,7 @@
 #
 # Affection mechanics:
 #
-# - Affection gain has a 7 points cap per day
+# - Affection gain has a 700 points cap per day
 # - Affection lose doesn't have a cap
 # - Max and Min possible values for affection are 1000000 and -1000000 respectively
 # - Player lose affection every time it takes longer than 1 week to visit Monika
