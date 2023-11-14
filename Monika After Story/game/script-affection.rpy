@@ -144,14 +144,14 @@ init -900 python in mas_affection:
     __STRUCT_DEF_VALUES = tuple([0.0] * __STRUCT_FMT.count("d"))
 
     __DEF_AFF_GAIN_MAP = {
-        BROKEN: 0.25,
-        DISTRESSED: 0.5,
-        UPSET: 0.75,
-        NORMAL: 1.0,
-        HAPPY: 1.25,
-        AFFECTIONATE: 1.5,
-        ENAMORED: 2.5,
-        LOVE: 2.0
+        BROKEN: 30.25,
+        DISTRESSED: 20.5,
+        UPSET: 30.75,
+        NORMAL: 50.0,
+        HAPPY: 100.25,
+        AFFECTIONATE: 100.5,
+        ENAMORED: 200.5,
+        LOVE: 200.0
     }
     __DEF_AFF_LOSE_MAP = {
         BROKEN: 20.0,
