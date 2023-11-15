@@ -10,7 +10,7 @@
 #
 # Affection mechanics:
 #
-# - Affection gain has a 7 points cap per day
+# - Affection gain has a 277 points cap per day
 # - Affection lose doesn't have a cap
 # - Max and Min possible values for affection are 1000000 and -1000000 respectively
 # - Player lose affection every time it takes longer than 1 week to visit Monika
@@ -144,14 +144,14 @@ init -900 python in mas_affection:
     __STRUCT_DEF_VALUES = tuple([0.0] * __STRUCT_FMT.count("d"))
 
     __DEF_AFF_GAIN_MAP = {
-        BROKEN: 0.25,
-        DISTRESSED: 0.5,
-        UPSET: 0.75,
-        NORMAL: 1.0,
-        HAPPY: 1.25,
-        AFFECTIONATE: 1.5,
+        BROKEN: 5.25,
+        DISTRESSED: 5.5,
+        UPSET: 5.75,
+        NORMAL: 5.0,
+        HAPPY: 5.25,
+        AFFECTIONATE: 5.5,
         ENAMORED: 2.5,
-        LOVE: 2.0
+        LOVE: 7.0
     }
     __DEF_AFF_LOSE_MAP = {
         BROKEN: 20.0,
